@@ -1,0 +1,86 @@
+<section class="vh-100">
+    <div class="display-6" style="margin-left: 25vh; margin-bottom: -3vh;"><strong>Welcome</strong></div>
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center  ">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="assets/img/login/loginO.png" class="img-fluid" alt="Phone image" style="width: 100%;
+            height: 100%; border: 1 solid white; border-radius: 20% 10%;">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="email">Email address</label>
+                        <input style="border: 1 solid white; border-radius: 17px " type="email" id="email"
+                            class="form-control form-control-lg" />
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="password">Password</label>
+                        <input style="border: 1 solid white; border-radius: 17px" type="password" id="password"
+                            class="form-control form-control-lg" />
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mb-4">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="remember" checked />
+                            <label class="form-check-label" for="remember"> Remember me </label>
+                        </div>
+                        <a href="#!">Forgot password?</a>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button style="border: 1 solid white; border-radius: 17px; " type="submit"
+                        class="btn btn-primary btn-lg btn-block w-100">Sign in</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <div class="login">
+    <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+        <div class="text-center mb-5">
+            <img src="../../../assets/img/login/login.png" alt="Image" height="50" class="mb-3">
+            <div class="text-900 text-3xl font-medium mb-3">Welcome Back</div>
+            <span class="text-600 font-medium line-height-3">Don't have an account?</span>
+            <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer">Create today!</a>
+        </div>
+        <h1>Login Now</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)">
+            <div class="formGroup">
+                <label for="email" class="block text-900 font-medium mb-2">Email :</label>
+                <input formcontrolname="email" type="text" class="form-control" pInputText class="w-full mb-3">
+                <div *ngIf="loginForm.get('email')?.invalid&& loginForm.get('email')?.touched"
+                    class="alert alert-danger mt-2 ">
+                    <p *ngIf="loginForm.get('email')?.errors?.['required']">email is required</p>
+                </div>
+            </div>
+            <div class="formGroup">
+                <label for="password" class="block text-900 font-medium mb-2">Password :</label>
+                <input [class.is-invalid]="loginForm.get('password')?.invalid&& loginForm.get('password')?.touched"
+                    formcontrolname="password" type="text" class="form-control" name="" id="" pInputText
+                    class="w-full mb-3">
+                <div *ngIf="loginForm.get('password')?.invalid&& loginForm.get('password')?.touched"
+                    class="alert alert-danger mt-2 ">
+                    <p *ngIf="loginForm.get('password')?.errors?.['required']">password is required</p>
+                    <p *ngIf="loginForm.get('password')?.errors?.['minLength']">password minLength is 3</p>
+                    <p *ngIf="loginForm.get('password')?.errors?.['maxLength']">password maxLength is 8</p>
+                </div>
+            </div>
+
+        </form>
+        <div class="flex align-items-center justify-content-between mb-6">
+            <div class="flex align-items-center">
+                <p-checkbox id="rememberme1" [binary]="true" styleClass="mr-2"></p-checkbox>
+                <label for="rememberme1" class="text-900">Remember me</label>
+            </div>
+            <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Forgot password?</a>
+        </div>
+
+        <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full"></button>
+    </div>
+</div> -->

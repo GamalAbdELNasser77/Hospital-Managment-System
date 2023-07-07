@@ -1,0 +1,9 @@
+<div class="row">
+  <section *ngFor="let doctor of doctors | paginate: { itemsPerPage: 9, currentPage: page }">
+    <app-doctor [data] = 'doctor'></app-doctor>
+  </section>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
+
+
+

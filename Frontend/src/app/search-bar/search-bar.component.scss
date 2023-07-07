@@ -1,0 +1,85 @@
+.search-bar{
+  border: solid 1px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+.titel{
+  // color: rgb(0, 112, 205);
+  font-size: 20px;
+}
+.sup-titel{
+  // color: rgb(0, 112, 205);
+  font-size: 14px;
+}
+.icon{
+  margin-inline-start: 1rem;
+  color: chartreuse;
+  font-size: 2rem;
+}
+.tap{
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+}
+.call{
+  border-bottom: solid 3px;
+}
+.book{
+  border-bottom: solid 3px;
+
+}
+.pi {
+  font-size: 2rem;
+}
+// .[ngClass]="tap == 2 ? 'active' : 'no-active'"
+.active{
+  border-color:  rgb(0, 112, 205);
+  color:rgb(0, 112, 205);
+  .pi {
+    color:rgb(0, 112, 205);
+    font-size: 2rem;
+  }
+}
+.no-active{
+  color: rgb(112, 117, 117);
+  border-bottom: 1px solid rgb(224, 224, 224);
+  .pi {
+    color: rgb(112, 117, 117);
+    font-size: 2rem;
+  }
+}
+
+.bbFlmF {
+  color: rgb(255, 255, 255);
+  background: rgb(239, 15, 15);
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgb(239, 15, 15) 0px 0px 0px 1px;
+  width: 11rem;
+  height: 48px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0px 0px 0px -1px;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+
+}
+
+.border{
+  border: solid 1px rgb(112, 117, 117);
+}
+
+.lable{
+  align-items: end;
+  display: flex;
+  justify-content: end;
+  padding-inline-end: 9px;
+}
+
+.p-button.p-button-text {
+  background-color: transparent;
+  color: #3B82F6;
+  border-color: transparent;}

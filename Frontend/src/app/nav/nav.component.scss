@@ -1,0 +1,26 @@
+@media only screen and (max-width: 992px) {
+  .navlink {
+   display: block;
+  }
+}
+
+.baricon {
+   display: none;
+  }
+@media only screen and (max-width: 991px) {
+  .baricon {
+   display: block;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono&family=Roboto:wght@300&display=swap');
+
+.scrollto{
+    font-size: 15px;
+    font-family: 'Martian Mono', monospace;
+
+color: rgb(8, 42, 25);
+    
+}
+
+
+

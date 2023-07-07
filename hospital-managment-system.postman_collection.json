@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "c29cade4-d2c8-47ee-943a-d14b3142c87f",
+		"name": "hospital-managment-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27465567"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "logIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"asd@gmail.com\",\r\n    \"password\":\"asd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8184/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8184",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"YY\",\r\n    \"lastName\": \"II\",\r\n    \"phoneNumber\": \"444\",\r\n    \"email\": \"asd@gmail.com\",\r\n    \"password\": \"asd\",\r\n    \"birthOfDate\": \"\",\r\n    \"address\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8184/api/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8184",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "doctors",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGE0YTYzNzM2OGM4MDIyNGM5NTgxNjYiLCJlbWFpbCI6ImFzZEBnbWFpbC5jb20iLCJpYXQiOjE2ODg1MTMzMTQsImV4cCI6MTY4ODUyMDUxNH0.x3ts0g3pEsMiuenAUL7FHFozHNnU313Qh_f-VOIxJrM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Bearer",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGE0YTYzNzM2OGM4MDIyNGM5NTgxNjYiLCJlbWFpbCI6ImFzZEBnbWFpbC5jb20iLCJpYXQiOjE2ODg1MTMzMTQsImV4cCI6MTY4ODUyMDUxNH0.x3ts0g3pEsMiuenAUL7FHFozHNnU313Qh_f-VOIxJrM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8184/api/doctor",
+							"host": [
+								"localhost"
+							],
+							"port": "8184",
+							"path": [
+								"api",
+								"doctor"
+							],
+							"query": [
+								{
+									"key": "Bearer",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGE0YTYzNzM2OGM4MDIyNGM5NTgxNjYiLCJlbWFpbCI6ImFzZEBnbWFpbC5jb20iLCJpYXQiOjE2ODg1MTMzMTQsImV4cCI6MTY4ODUyMDUxNH0.x3ts0g3pEsMiuenAUL7FHFozHNnU313Qh_f-VOIxJrM",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "treatment",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "add Copy",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update Copy",
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

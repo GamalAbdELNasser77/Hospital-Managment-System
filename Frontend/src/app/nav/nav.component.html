@@ -1,0 +1,35 @@
+<!-- ======= Header ======= -->
+<header id="header" class="header">
+  <div class="container-fluid">
+<header id="header" class="header fixed-top navbar-dark bg-light " [class.fixed-top]="isNavbarFixed">
+    <div class="container-fluid">
+
+    <div class="row justify-content-center">
+      <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
+        <h1 class="logo me-auto me-lg-0"><a routerLink="/home"><img src="/assets/img/logo.png"></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+
+          <ul>
+            <li><a class="nav-link scrollto" routerLink="/home">Home <i class="fa-solid fa-house"></i></a></li>
+            <li><a class="nav-link scrollto" routerLink="/Pharmacy">Pharmacy <i
+                  class="fa-sharp fa-solid fa-staff-snake"></i></a></li>
+            <li><a class="nav-link scrollto" routerLink="/doctors">Doctors <i class="fa-solid fa-user-doctor"></i></a>
+            </li>
+            <li><a class="nav-link scrollto " routerLink="/cart">Cart <i class="pi pi-shopping-cart"></i> </a></li>
+            <li><a class="nav-link scrollto " routerLink="/register">Register <i class="fa-solid fa-user-plus"></i></a>
+            </li>
+            <li><a class="nav-link scrollto " routerLink="/login">Login <i class="fa-solid fa-user-group"></i></a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+
+          <button style="border: none;">
+            <i class="fa-solid fa-bars baricon" style="font-size: 40px;"></i>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

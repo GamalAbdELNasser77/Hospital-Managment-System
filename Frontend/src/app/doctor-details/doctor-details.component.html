@@ -1,0 +1,121 @@
+<!--start searc bar -->
+<app-search-bar (event)="onDoctorChange($event)"></app-search-bar>
+<!--end searc bar -->
+<div *ngIf="!isLoad">
+</div>
+<!-- image cover  -->
+<!-- <div class="pharmacy-shop">
+      <div class="text-phar">
+         <h5 class="card-title">Special title treatment</h5>
+         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+         <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div> -->
+
+<!-- <div class="pharmacy-shop">
+   <div class="text-phar">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div> -->
+
+<!-- image cover  -->
+<div class="pharmacy-shop">
+   <div class="text-phar">
+      <h1 class="card-title">{{doctorDetails.name}}</h1>
+      <h3 class="card-text">{{doctorDetails.title}}</h3>
+      <h4 class="card-text">{{doctorDetails.location}}</h4>
+   </div>
+   <div>
+      <img [src]="doctorDetails.image?doctorDetails.image:''" alt="image" class="doctorimg">
+
+
+   </div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<section id="team" class="pb-5">
+   <div class="container">
+       <h5 class="section-title h1"><strong> معلومات الحجز </strong></h5>
+       <div class="row">
+           <!-- Team member -->
+           <div class="col-xs-12 col-sm-6 col-md-4">
+               <div class="image-flip" >
+                   <div class="mainflip flip-0">
+                       <div class="frontside">
+                           <div class="card">
+                               <div class="card-body text-center">
+                                   <p><img class=" img-fluid" src="../../assets/img/doctor details/money.avif" alt="card image"></p>
+                                   <h4 class="card-title"><strong> سعر الكشف</strong></h4>
+                                   <h4 class="card-text"><strong>{{doctorDetails.price}}</strong></h4>
+                                   <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="backside">
+                           <div class="card">
+                               <div class="card-body text-center mt-4">
+                                   <h4 class="card-title"><strong></strong></h4>
+                                   <h4 class="card-text"><strong>يمكنك الإتصال بنا فى أى وقت على الأرقام الأتية خدمة 24 ساعة</strong></h4>
+                                   <br>
+                                   <h4 class="card-title"><strong>{{doctorDetails.phone}}</strong></h4>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <!-- ./Team member -->
+           <!-- Team member -->
+           <div class="col-xs-12 col-sm-6 col-md-4">
+               <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                   <div class="mainflip">
+                       <div class="frontside">
+                           <div class="card">
+                               <div class="card-body text-center">
+                                   <p><img class=" img-fluid" src="../../assets/img/doctor details/undraw_Time_management_re_tk5w.png" alt="card image"></p>
+                                   <h4 class="card-title"><strong>مدة الإنتظار</strong></h4>
+                                   <h4 class="card-text"><strong>{{doctorDetails.waitingTime}}</strong></h4>
+                                   <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="backside">
+                           <div class="card">
+                               <div class="card-body text-center mt-4">
+                                 <p><img class=" img-fluid" src="../../assets/img/doctor details/undraw_Smiley.png" alt="card image"></p>
+                                 <h4 class="card-title">شكراً على ثقتك فينا نتمنى لك دوام الصحة</h4>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <!-- ./Team member -->
+           <!-- Team member -->
+           <div class="col-xs-12 col-sm-6 col-md-4">
+               <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                   <div class="mainflip">
+                       <div class="frontside">
+                           <div class="card">
+                               <div class="card-body text-center">
+                                   <p><img [src]="doctorDetails.image?doctorDetails.image:''" alt="image" class="doctorimg"></p>
+                                   <h4 class="card-title"><strong>معلومات عن الدكتور</strong></h4>
+                                   <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="backside">
+                           <div class="card">
+                               <div class="card-body text-center mt-4">
+                                 <h4 class="card-text"><strong>{{doctorDetails.about}}</strong></h4>
+                                   <h4 class="card-title"><strong>{{doctorDetails.clinicName}}</strong></h4>
+                                   <h4 class="card-text"><strong>{{doctorDetails.location}}</strong></h4>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <!-- ./Team member -->
+       </div>
+   </div>
+</section>

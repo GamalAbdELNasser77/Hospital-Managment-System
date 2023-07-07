@@ -1,0 +1,100 @@
+<div class="row col-12 search-bar mb-5">
+
+  <div class="row col-10 d-flex flex-warp  tap">
+    <div class="col-6 d-flex call flex-warp align-items-center justify-content-center" (click)="tap=1"
+      [ngClass]="tap == 1 ? 'active' : 'no-active'">
+      <div class="">
+        <div class=" titel"> مكالمة دكتور</div>
+        <div class="sup-titel"> المتابعة عبر مكالمة مع دكتور</div>
+      </div>
+      <div class="icon"> <span class="pi pi-phone"></span></div>
+    </div>
+    <div class="col-6 d-flex book flex-warp align-items-center justify-content-center" (click)="tap=2"
+      [ngClass]="tap == 2 ? 'active' : 'no-active'">
+      <div class="">
+        <div class=" titel"> احجز دكتور</div>
+        <div class="sup-titel"> الفحص أو الإجراء</div>
+      </div>
+      <div class="icon"> <span class="pi pi-calendar-plus"></span></div>
+    </div>
+  </div>
+
+  <div class="row col-12 d-flex align-items-center justify-content-center mt-3 mb-3" *ngIf="tap==1">
+    <div data-testid="search-bar__search-button" class="bbFlmF">
+      <span class="SearchBarstyle__ButtonText-sc-1pey3th-5 HWZGE">
+        <i class="pi pi-search" style="font-size: 15px"></i>ابحث</span>
+    </div>
+    <div class="col-10 col-md-6 p-0 p-fluid">
+      <p-dropdown [options]="doctors" appendTo="body" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
+    </div>
+  </div>
+
+  <div class="row col-12 d-flex align-items-center justify-content-center mt-3 mb-3" *ngIf="tap==2">
+
+    <div class="col-2  d-flex justify-content-end p-0">
+      <div data-testid="search-bar__search-button" class="col-2  bbFlmF">
+        <span class="SearchBarstyle__ButtonText-sc-1pey3th-5 HWZGE" (click)="searchDoctors()">
+          <i class="pi pi-search" style="font-size: 15px"></i>
+          ابحث
+        </span>
+      </div>
+    </div>
+    <div class="col-10 p-0  d-flex justify-content-center align-items-center">
+      <!-- <div class="col-3 p-fluid border">
+        <input type="text" [(ngModel)]="selectedPrice" (ngModelChange)="searchDoctors()" placeholder="Select a Doctor"
+          pInputText />
+      </div> -->
+      <div class="col-3 p-fluid">
+        <p-dropdown [options]="listDoctors" [(ngModel)]="selectedName" (onChange)="searchDoctors()" optionLabel="name"
+          optionValue="name" [filter]="true" filterBy="name" [showClear]="true" placeholder="Select a Doctor">
+          <ng-template pTemplate="selectedItem">
+            <div class="flex align-items-center gap-2" *ngIf="selectedName">
+              <div>{{ selectedName }}</div>
+            </div>
+          </ng-template>
+          <ng-template let-doctor pTemplate="item">
+            <div class="flex align-items-center gap-2">
+              <div>{{ doctor.name }}</div>
+            </div>
+          </ng-template>
+        </p-dropdown>
+        <!-- <p-dropdown [options]="listDoctors" appendTo="body" placeholder="Select a City" optionLabel="name"></p-dropdown> -->
+      </div>
+      <div class="col-3 p-fluid">
+        <p-dropdown [options]="listDoctors" [(ngModel)]="selectedTitle" (onChange)="searchDoctors()" optionLabel="title"
+          optionValue="title" [filter]="true" filterBy="name" [showClear]="true" placeholder="Select a Country">
+          <ng-template pTemplate="selectedItem">
+            <div class="flex align-items-center gap-2" *ngIf="selectedDoctors">
+              <div>{{ selectedTitle }}</div>
+            </div>
+          </ng-template>
+          <ng-template let-doctor pTemplate="item">
+            <div class="flex align-items-center gap-2">
+              <div>{{ doctor.title }}</div>
+            </div>
+          </ng-template>
+        </p-dropdown>
+        <!-- <p-dropdown [options]="listDoctors" appendTo="body" placeholder="Select a City" optionLabel="name"></p-dropdown> -->
+      </div>
+
+      <!-- <div class="col-3 p-fluid border">
+          <p-overlayPanel #op>
+            <img src="https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg" alt="product" />
+          </p-overlayPanel>
+          <p-button (click)="op.toggle($event)" icon="pi pi-users" styleClass="p-button-text"
+            label="انا ابحث عن دكتور "></p-button>
+        </div> -->
+    </div>
+  </div>
+</div>
+
+
+
+
+<div *ngFor=" let doctor of doctors" class="card-body">
+  <div (click)="goToDoctor(doctor._id)">
+    <h2 class="card-title"><a routerLink='/DoctorDetails/{{doctor._id}}'>{{doctor.name}}</a></h2>
+    <h5 class="card-text">
+    </h5>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<!-- <div class="container py-2 "> -->
+  <!-- Card Start -->
+  <div class="card hov pulse">
+    <div class="row ">
+
+      <div class="col-md-7 px-3 direction">
+        <div class="card-block px-6">
+          <h3 class="card-title">{{data.name}}</h3>
+          <p class="card-text">
+            {{data.about}}
+          </p>
+          <h5 class="card-loc"><i class="fa-solid fa-location-dot"></i> {{data.location}}</h5>
+          <br>
+          <a [routerLink]="['/DoctorDetails',data._id]" class="btn btn-outline-success  m-1">show more details</a>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <img style="object-fit:contain; border-radius:10px; height:250px;" class="w-100" src="{{data.image}}" alt="doctor_image">
+      </div>
+    </div>
+  </div>
+  <!-- End of card -->
+

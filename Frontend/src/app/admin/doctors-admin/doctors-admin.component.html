@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">title</th>
+        <th scope="col">location</th>
+        <th scope="col">about</th>
+        <th scope="col">price</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let item of listDoctors let index=index">
+        <th scope="row">{{index + 1}}</th>
+        <td>
+            <img class="image" [src]="item.image" />
+        </td>
+        <td>{{item.name}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.location}}</td>
+        <td>{{item.about}}</td>
+        <td>{{item.price}}</td>
+        <td>
+            <button type="button" class="btn btn-danger" mdbRipple (click)="Delete(item._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
